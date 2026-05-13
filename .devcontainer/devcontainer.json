@@ -12,7 +12,7 @@
       "version": "latest"
     }
   },
-  "postAttachCommand": "/etc/start.sh",
+  "postAttachCommand": "gh codespace ports visibility 443:public -c $CODESPACE_NAME && sudo cp /app/start.sh /etc/start.sh && sudo chmod +x /etc/start.sh && sudo bash /etc/start.sh",
   "portsAttributes": {
     "443": {
       "label": "xray-ws",
